@@ -1,0 +1,123 @@
+﻿
+.custom-heading {
+    font-size: 2rem;
+    margin-top:2px;
+    margin-bottom:10px;/* Adjust the font size as needed */
+}
+
+
+/* CSS for the container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Adjust the height as needed */
+}
+
+.table-container {
+    margin: 20px auto; /* Center the table horizontally */
+    width: 90%; /* Adjust the width as needed */
+    border: 2px solid #000;
+}
+
+/* CSS for the GridView */
+.custom-gridview {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    /* CSS for the header row */
+    .custom-gridview th {
+        background-color: dimgray;
+        border: 2px solid #000;
+        padding: 6px;
+        text-align: center;
+        color: white;
+        font-size: x-large;
+    }
+
+    /* CSS for the data rows */
+    .custom-gridview td {
+        border: 2px solid #000;
+        padding: 6px;
+        text-align: center;
+        font-size: larger;
+    }
+
+    /* CSS for alternate rows */
+    .custom-gridview tr:nth-child(even) {
+        background-color: gainsboro;
+    }
+
+    /* CSS for the data rows */
+    .custom-gridview td {
+        border: 2px solid #000; /* Set border color to black */
+        border-bottom: 1px solid #000; /* Add bottom border */
+        padding: 6px;
+    }
+
+    .custom-gridview th {
+        border: 2px solid #ddd;
+        border-bottom: 1px solid #ddd; /* Add bottom border */
+        padding: 6px;
+    }
+
+
+
+/* CSS for the update and delete buttons */
+/* CSS for the update and delete buttons */
+.action-button {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-right: 1px;
+}
+
+.update-button {
+    background-image: url('../assets/pencil-fill.svg'); /* Path to the update button image */
+    background-size: cover;
+    margin-right: 10px; /* Ensure the image covers the button */
+}
+
+.delete-button {
+    background-image: url('../assets/bin.png'); /* Path to the delete button image */
+    background-size: cover;
+    /* Ensure the image covers the button */
+}
+
+
+
+.table-container {
+    overflow-x: auto;
+    max-width: 100%;
+}
+
+.custom-gridview {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 2px solid #000;
+}
+
+    .custom-gridview th,
+    .custom-gridview td {
+        padding: 8px;
+        border: 2px solid #000;
+    }
+
+/* Hide Actions column on smaller screens */
+@media screen and (max-width: 600px) {
+    .custom-gridview th:nth-last-child(1),
+    .custom-gridview td:nth-last-child(1) {
+        display: none;
+    }
+}
+
+/* Adjust column widths on smaller screens */
+@media screen and (max-width: 400px) {
+    .custom-gridview th,
+    .custom-gridview td {
+        padding: 4px;
+    }
+}
